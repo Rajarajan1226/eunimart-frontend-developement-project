@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="firstpage.css">
+    <!-- <style>
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input[type="submit"] {
+        margin-top: 10px;
+      }
+
+      .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+      
+    </style> -->
+  </head>
+  <body>
+    <h1><center>Login Page</center></h1>
+    <form class="contact-form" id="login-form">
+      <label class="contact-form label ">
+        Name:
+        <input type="text" name="name" id="name"required />
+      </label>
+      <label class="contact-form label ">
+        Phone number:
+        <input type="tel" name="phone" id="phone"required />
+      </label>
+      <label class="contact-form label ">
+        Email:
+        <input type="email" name="email" id="email"required />
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
+    <div id="error-message"></div>
+
+    <script>
+      const username = document.getElementById("name").innerHTML;
+      const phoneno= document.getElementById("phone").innerHTML;
+      const email= document.getElementById("email").innerHTML;
+      localStorage.setItem("UserName",JSON.stringify(username));
+      localStorage.setItem("Phoneno",JSON.stringify(phoneno));
+      localStorage.setItem("Email",JSON.stringify(email));
+      
+
+
+      // loginForm.addEventListener("submit", (event) => {
+      //   event.preventDefault();
+      //   const name = event.target.elements.name.value;
+      //   const phone = event.target.elements.phone.value;
+      //   const email = event.target.elements.email.value;
+
+      //   if (name && phone && email) {
+      //     const user = {
+      //       name,
+      //       phone,
+      //       email,
+      //     };
+      //     localStorage.setItem("user", JSON.stringify(user));
+      //     window.location.href = "home.html";
+      //   } else {
+      //     errorMessage.textContent =
+      //       "Please enter your name, phone number, and email address";
+      //   }
+      // });
+    </script>
+  </body>
+</html>
